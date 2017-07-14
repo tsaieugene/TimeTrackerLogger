@@ -1,0 +1,35 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: #000;
+}
+a {
+    color: #00B7FF;
+}
+
+.box {
+    position: absolute;
+    top: 20%;
+}
+.list-group-item {
+    overflow: auto;
+}
+
+#homePageTitle {
+    margin: 3em auto;
+    text-align: center;
+}
+
+#toDoList {
+    line-height: 1.6em;
+    font-size: 1.6em;
+    min-height: 1.6em;
+    position: relative;
+}

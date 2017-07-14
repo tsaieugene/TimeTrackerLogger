@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<% include partials/header %>
+    
+    <body class="container"> 
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="/todolist/user?id=<%= id %>">Today</a></li>
+            <li role="presentation"><a href="/history/user?id=<%= id %>">History</a></li>
+            <li role="presentation" class="active"><a href="/history/admin?id=<%= id %>">View All</a></li>
+            <button class="btn btn-danger btn-md pull-right logoutButton">
+                <span>Logout</span>
+            </button>
+        </ul>
+        <div class="jumbotron">
+            <h1>All Tasks</h1> 
+        </div>
+        <ul class="list-group" id="toDoList">
+            <%  for(var key in todos) { %>
+                <li class="list-group-item <%= todos[key].complete ? "list-group-item-success" : "list-group-item-danger" %>"><%= todos[key].title %>
+                    <span class="pull-right">User: <%= todos[key].createdBy %></span>
+                    <br>
+                    <span class="pull-right">Date: <%= todos[key].date %></span>
+                </li>
+            <% } %>
+        </ul>
+        
+        <script src="/javascripts/logout.js"></script>
+    </body>
+</html>
