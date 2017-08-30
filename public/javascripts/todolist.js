@@ -110,7 +110,6 @@ $(document).ready(function() {
                         location.reload();
                     } else {
                         modalErrorAlert("div.alert", $(".error-panel", "#editForm"), resp.message); 
-            return false;
                     }
                 }
             });  
