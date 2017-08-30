@@ -4,18 +4,6 @@ var router = express.Router();
 //active connection to database
 var knex = require('../db/knex');
 var adminId = 100784047254119;
-/* This router is mounted at http://localhost:3000/history */
-//router.get('/', function(req, res) {
-//    var d = new Date();
-//    d = d.toISOString().substring(0, 10);
-//    knex('todo')
-//    .whereNot('date', d)
-//    .select()
-//    .orderBy('id', 'asc')
-//    .then(function(todos) {
-//        res.render('history', { todos: todos});
-//    });
-//});
 
 // get all tasks posted (admin only)
 router.get('/admin', function(req, res) {
